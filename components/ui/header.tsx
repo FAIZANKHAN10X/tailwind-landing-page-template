@@ -1,35 +1,30 @@
 import Link from "next/link";
-import Logo from "./logo";
 
 export default function Header() {
   return (
-    <header className="fixed top-2 z-30 w-full md:top-6">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-white/90 px-3 shadow-lg shadow-black/[0.03] backdrop-blur-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(var(--color-gray-100),var(--color-gray-200))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
-          {/* Site branding */}
-          <div className="flex flex-1 items-center">
-            <Logo />
-          </div>
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <div className="text-2xl font-display font-semibold tracking-tight text-gray-900">
+          YourBrand
+        </div>
 
-          {/* Desktop sign in links */}
-          <ul className="flex flex-1 items-center justify-end gap-3">
-            <li>
-              <Link
-                href="/signin"
-                className="btn-sm bg-white text-gray-800 shadow-sm hover:bg-gray-50"
-              >
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/signup"
-                className="btn-sm bg-gray-800 text-gray-200 shadow-sm hover:bg-gray-900"
-              >
-                Register
-              </Link>
-            </li>
-          </ul>
+        {/* Navigation */}
+        <nav className="hidden md:flex space-x-8 text-sm font-sans text-gray-600">
+          <Link href="#"><a className="hover:text-black transition">Solutions</a></Link>
+          <Link href="#"><a className="hover:text-black transition">Pricing</a></Link>
+          <Link href="#"><a className="hover:text-black transition">About</a></Link>
+          <Link href="#"><a className="hover:text-black transition">Contact</a></Link>
+        </nav>
+
+        {/* CTA Button */}
+        <div className="hidden md:block">
+          <a
+            href="#"
+            className="px-4 py-2 text-sm font-sans bg-black text-white rounded-md hover:bg-gray-900 transition"
+          >
+            Get Started
+          </a>
         </div>
       </div>
     </header>
