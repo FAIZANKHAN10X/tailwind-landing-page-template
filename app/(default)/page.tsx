@@ -6,8 +6,7 @@ export default function Home() {
           Supercharge Your Business with AI-Powered Sales Infrastructure
         </h1>
         <p className="text-lg font-sans text-gray-600 mb-8">
-          Replace your underperforming sales reps with automated, intelligent agents that
-          work 24/7 — no training, no salary, no sick days.
+          Replace your underperforming sales reps with automated, intelligent agents that work 24/7 — no training, no salary, no sick days.
         </p>
         <a
           href="#"
