@@ -1,28 +1,26 @@
-export const metadata = {
-  title: "Home - Simple",
-  description: "Page description",
-};
-
-import Hero from "@/components/hero-home";
-import BusinessCategories from "@/components/business-categories";
-import FeaturesPlanet from "@/components/features-planet";
-import LargeTestimonial from "@/components/large-testimonial";
-import Cta from "@/components/cta";
-
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import DefaultLayout from "@/components/ui/DefaultLayout";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-
-      <main className="px-6 py-12 text-center">
-        <h1 className="text-4xl font-bold mb-4">Your Landing Page</h1>
-        <p className="text-lg text-gray-600">This is your content area.</p>
-      </main>
-
-      <Footer />
-    </>
+    <DefaultLayout>
+      {/* Hero Section */}
+      <section className="bg-white py-24 px-6 md:px-12">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-900 leading-tight mb-6">
+            Supercharge Your Business with AI-Powered Sales Infrastructure
+          </h1>
+          <p className="text-lg font-sans text-gray-600 mb-8">
+            Replace your underperforming sales reps with automated, intelligent agents that
+            work 24/7 — no training, no salary, no sick days.
+          </p>
+          <a
+            href="#"
+            className="inline-block px-6 py-3 bg-black text-white font-sans text-sm rounded hover:bg-gray-900 transition"
+          >
+            Watch Demo
+          </a>
+        </div>
+      </section>
+    </DefaultLayout>
   );
 }
